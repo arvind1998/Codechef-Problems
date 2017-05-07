@@ -29,12 +29,13 @@ int main()
 	
 	for(i=0;i<t;i++)
 	{
-		if(strcmp(a[i],b[i])==0)
-			ans[i]=1;
-		else if(a[i][0]=='E')
-			ans[i]=0;
-		else
-			ans[i]=0;
+		if((strcmp(a[i],b[i])==0)&&(a[i][0]=='E'))
+                        ans[i]=0;
+                if((strcmp(a[i],b[i])==0)&&(a[i][0]!='E'))
+                        ans[i]=1;
+                else
+                        ans[i]=0;
+
 	}
 	for(i=0;i<t;i++)
 	{
